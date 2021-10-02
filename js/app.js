@@ -56,4 +56,79 @@ if (answerHair === "yes" || answerHair === "y") {
   // console.log('You answered correctly!');
 }
 
-alert("Thank you, " + username + ", for answering my questions.");
+//THIS IS QUESTION 6
+
+
+let attempts = 0;
+
+//let numberGuesser = prompt('Guess a number between 1-20');
+
+ let correctAnswer = 8;
+
+
+for(let i = 4; i >= attempts; i-- ) {
+    let correctAnswer = 8;
+    let numberGuesser = parseInt(prompt('Guess a number between 1-20', ''));
+
+    if(numberGuesser === correctAnswer) {
+        alert('You are correct.');
+        break;
+    } else if (numberGuesser < correctAnswer) {
+        alert(`Your guess is too low. You have ${(i-1)} attempts remaining.`);
+    } else if(numberGuesser > correctAnswer) {
+        alert(`Your guess is too high. You have ${(i)} attempts remaining.`);
+    } 
+    
+    if ((i) === 1){
+      alert(`The correct answer was ${correctAnswer}.`);
+      break;
+    }
+
+}
+
+alert('Thank you, ' + username + ', for playing along.')
+
+// alert(`The correct answer was ${correctAnswer}.`);
+
+// let attempts = 4;
+
+// let correctAnswer = 8;
+
+
+
+
+
+
+
+//THIS IS QUESTION 7
+// Use a while loop to create your 6th question that creates four opportunities 
+
+// have your answers in an array for your 7th question that have six attempts with multiple correct answer. You can not use a function yet
+
+let petsName = ['Chance','Weiner','Stinky Boy']
+let userResponse;
+let attemptRemaining = 6;
+let answeredCorrectly  = false;
+let score = 0;
+score++
+
+
+
+
+while (attemptsRemaining && !answeredCorrectly) {
+	console.log('I\'m inside the loop');
+
+for (let i = 0; i < petsName.length; i++) {
+	console.log(petsName[i]);
+	if (userResponse === petsName[i]) {
+		alert('That is correct');
+		answeredCorrectly = true;
+	} else {
+		alert('That is wrong');
+	}
+	console.log(attemptsRemaining);
+	alert('You have ${attemptsRemaining -1 }');
+	
+	attemptsRemaining--;
+}
+}
