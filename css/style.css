@@ -3,15 +3,16 @@
 }
 
 body {
-  background: cornflowerblue;
+  background: rgb(216, 208, 208);
 }
 
 header {
   text-align: center;
-  background-color: black;
   color: white;
 }
-
+.puppyBackground {
+  background-image: url("img/mydoggies.PNG");
+}
 a {
   color: rgb(83, 8, 83);
 }
@@ -33,7 +34,7 @@ hr {
 }
 
 p {
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .fun {
@@ -48,19 +49,22 @@ article {
   max-width: 500px;
   padding: 20px;
   margin: 0 auto;
+  font-size: 20px;
+  clear: both;
 }
 
 ul li {
   text-align: center;
   list-style-position: inside;
   list-style-type: disc;
-  
+  font-size: 20px;
 }
 
 ol li {
     text-align: center;
     list-style-position: inside;
     list-style-type: decimal;
+    font-size: 20px;
 }
 
 .topTen {
@@ -76,6 +80,16 @@ img {
   margin-right: 0px;
   clear: both;  
 }
+
+.reporter {
+  /* float: left; */
+  width: 480px;
+  /* margin-right: 0px; */
+  float: right;
+}
+
+
+
 footer {
   text-align: center;
 }

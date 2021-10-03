@@ -86,7 +86,7 @@ for(let i = 4; i >= attempts; i-- ) {
 
 }
 
-alert('Thank you, ' + username + ', for playing along.')
+
 
 // alert(`The correct answer was ${correctAnswer}.`);
 
@@ -105,30 +105,35 @@ alert('Thank you, ' + username + ', for playing along.')
 
 // have your answers in an array for your 7th question that have six attempts with multiple correct answer. You can not use a function yet
 
-let petsName = ['Chance','Weiner','Stinky Boy']
-let userResponse;
+
+
+
+
+let petsName = ['chance','weiner','stinky boy']
+let userResponse = prompt('What is my dogs name? (there are multiple correct answers)').toLowerCase();
 let attemptRemaining = 6;
 let answeredCorrectly  = false;
 let score = 0;
 score++
+// // while (attemptsRemaining && !answeredCorrectly) {
 
+// 	// console.log('I\'m inside the loop');
 
-
-
-while (attemptsRemaining && !answeredCorrectly) {
-	console.log('I\'m inside the loop');
-
-for (let i = 0; i < petsName.length; i++) {
-	console.log(petsName[i]);
-	if (userResponse === petsName[i]) {
-		alert('That is correct');
+for (let j = 0; j < petsName.length; j++) {
+	// console.log(petsName[i]);
+	if (userResponse === petsName[j]) {
+		alert('That is correct ' + username);
 		answeredCorrectly = true;
-	} else {
+	} else{
 		alert('That is wrong');
 	}
-	console.log(attemptsRemaining);
-	alert('You have ${attemptsRemaining -1 }');
+	// console.log(attemptsRemaining);
+	alert(`You have ${attemptsRemaining -1 }`);
 	
-	attemptsRemaining--;
+	// attemptsRemaining--;
 }
-}
+// }
+
+alert('Thank you, ' + username + ', for playing along.');
+
+
