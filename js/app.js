@@ -1,5 +1,7 @@
 "use strict";
 
+let score = 0;
+
 let username = prompt("What is your name?");
 
 alert("Hello " + username + " , welcome to my About Me page!");
@@ -8,6 +10,7 @@ let answerSports = prompt("Does Tiara like sports? Yes or No").toLowerCase();
 
 if (answerSports === "no" || answerSports === "n") {
   alert("You answered correctly!");
+  score++;
   // console.log('You answered correctly!');
 } else {
   alert("Sorry, you are wrong.");
@@ -18,6 +21,7 @@ let answerMilk = prompt("Can Tiara drink milk? Yes or No").toLowerCase();
 
 if (answerMilk === "no" || answerMilk === "n") {
   alert("You answered correctly!");
+  score++;
   // console.log('You answered correctly!');
 } else {
   alert("Sorry, you are wrong.");
@@ -28,6 +32,7 @@ let answerPet = prompt("Does Tiara have a dog? Yes or No").toLowerCase();
 
 if (answerPet === "yes" || answerPet === "y") {
   alert("You answered correctly!");
+  score++;
   // console.log('You answered correctly!');
 } else {
   alert("Sorry, you are wrong.");
@@ -40,6 +45,7 @@ let answerBoyfriend = prompt(
 
 if (answerBoyfriend === "yes" || answerBoyfriend === "y") {
   alert("You answered correctly!");
+  score++;
   // console.log('You answered correctly!');
 } else {
   alert("Sorry, you are wrong.");
@@ -50,6 +56,7 @@ let answerHair = prompt("Does Tiara have short hair? Yes or No").toLowerCase();
 
 if (answerHair === "yes" || answerHair === "y") {
   alert("You answered correctly!");
+  score++;
   // console.log('You answered correctly!');
 } else {
   alert("Sorry, you are wrong.");
@@ -72,6 +79,7 @@ for(let i = 4; i >= attempts; i-- ) {
 
     if(numberGuesser === correctAnswer) {
         alert('You are correct.');
+        score++;
         break;
     } else if (numberGuesser < correctAnswer) {
         alert(`Your guess is too low. You have ${(i-1)} attempts remaining.`);
@@ -88,14 +96,6 @@ for(let i = 4; i >= attempts; i-- ) {
 
 
 
-// alert(`The correct answer was ${correctAnswer}.`);
-
-// let attempts = 4;
-
-// let correctAnswer = 8;
-
-
-
 
 
 
@@ -105,34 +105,28 @@ for(let i = 4; i >= attempts; i-- ) {
 
 // have your answers in an array for your 7th question that have six attempts with multiple correct answer. You can not use a function yet
 
+let petsName = ['chance','weiner','stinky boy'];
 
 
-
-
-let petsName = ['chance','weiner','stinky boy']
-let userResponse = prompt('What is my dogs name? (there are multiple correct answers)').toLowerCase();
-let attemptRemaining = 6;
-let answeredCorrectly  = false;
-let score = 0;
-score++
-// // while (attemptsRemaining && !answeredCorrectly) {
-
-// 	// console.log('I\'m inside the loop');
-
-for (let j = 0; j < petsName.length; j++) {
-	// console.log(petsName[i]);
-	if (userResponse === petsName[j]) {
-		alert('That is correct ' + username);
-		answeredCorrectly = true;
-	} else{
-		alert('That is wrong');
-	}
-	// console.log(attemptsRemaining);
-	alert(`You have ${attemptsRemaining -1 }`);
-	
-	// attemptsRemaining--;
+let guesses = 0;
+let correct = false;
+for (let k = 6; k > guesses; k--) {
+  let userResponse = prompt('What is my dogs name? (there are multiple correct answers)').toLowerCase();
+  for (let j = 0; j < petsName.length; j++) {
+    if (userResponse.toLowerCase() === petsName[j]) {
+      alert('That is correct! '+ username);
+      correct = true;
+      score++;
+    }
+  }
+  if (!correct) {
+    alert(`You have ${[k - 1]} guesses left.`);
+  }
+  if (correct) break;
 }
-// }
+
+alert(`The names my dog goes by were ${petsName}`);
+alert(`Your total score was ${score}`);
 
 alert('Thank you, ' + username + ', for playing along.');
 
