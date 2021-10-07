@@ -38,18 +38,11 @@ function questionThree() {
 };
 questionThree();
 
-let answerBoyfriend = prompt(
-  "Does Tiara have a boyfriend? Yes or No"
-).toLowerCase();
-
-if (answerBoyfriend === "yes" || answerBoyfriend === "y") {
-  alert("You answered correctly!");
-  score++;
-  // console.log('You answered correctly!');
-} else {
-  alert("Sorry, you are wrong.");
-  // console.log('You answered correctly!');
-}
+function questionFour() {
+  let answerBoyfriend = prompt("Does Tiara have a boyfriend? Yes or No").toLowerCase();
+  checkAnswer(answerBoyfriend, arrayOfAnswersOne[3], arrayOfAnswersTwo[3]);
+};
+questionFour();
 
 let answerHair = prompt("Does Tiara have short hair? Yes or No").toLowerCase();
 
