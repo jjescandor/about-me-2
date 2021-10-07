@@ -44,16 +44,13 @@ function questionFour() {
 };
 questionFour();
 
-let answerHair = prompt("Does Tiara have short hair? Yes or No").toLowerCase();
+function questionFive() {
+  let answerHair = prompt("Does Tiara have short hair? Yes or No").toLowerCase();
+  checkAnswer(answerHair, arrayOfAnswersOne[4], arrayOfAnswersTwo[4]);
+};
+questionFive();
 
-if (answerHair === "yes" || answerHair === "y") {
-  alert("You answered correctly!");
-  score++;
-  // console.log('You answered correctly!');
-} else {
-  alert("Sorry, you are wrong.");
-  // console.log('You answered correctly!');
-}
+
 
 //THIS IS QUESTION 6
 
