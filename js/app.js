@@ -24,16 +24,11 @@ function questionOne() {
 };
 questionOne();
 
-let answerMilk = prompt("Can Tiara drink milk? Yes or No").toLowerCase();
-
-if (answerMilk === "no" || answerMilk === "n") {
-  alert("You answered correctly!");
-  score++;
-  // console.log('You answered correctly!');
-} else {
-  alert("Sorry, you are wrong.");
-  // console.log('You answered correctly!');
-}
+function questionTwo() {
+  let answerMilk = prompt("Can Tiara drink milk? Yes or No").toLowerCase();
+  checkAnswer(answerMilk, arrayOfAnswersOne[1], arrayOfAnswersTwo[1]);
+};
+questionTwo();
 
 let answerPet = prompt("Does Tiara have a dog? Yes or No").toLowerCase();
 
