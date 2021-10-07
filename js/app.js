@@ -30,16 +30,13 @@ function questionTwo() {
 };
 questionTwo();
 
-let answerPet = prompt("Does Tiara have a dog? Yes or No").toLowerCase();
 
-if (answerPet === "yes" || answerPet === "y") {
-  alert("You answered correctly!");
-  score++;
-  // console.log('You answered correctly!');
-} else {
-  alert("Sorry, you are wrong.");
-  // console.log('You answered correctly!');
-}
+
+function questionThree() {
+  let answerPet = prompt("Does Tiara have a dog? Yes or No").toLowerCase();
+  checkAnswer(answerPet, arrayOfAnswersOne[2], arrayOfAnswersTwo[2]);
+};
+questionThree();
 
 let answerBoyfriend = prompt(
   "Does Tiara have a boyfriend? Yes or No"
