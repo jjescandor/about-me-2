@@ -50,41 +50,40 @@ function questionFive() {
 };
 questionFive();
 
-
-
 //THIS IS QUESTION 6
 
 
-let attempts = 0;
+
 
 //let numberGuesser = prompt('Guess a number between 1-20');
-
+let attempts = 4;
 let correctAnswer = 8;
 
-
-for (let i = 4; i >= attempts; i--) {
-  let correctAnswer = 8;
-  let numberGuesser = parseInt(prompt('Guess a number between 1-20', ''));
-
-  if (numberGuesser === correctAnswer) {
-    alert('You are correct.');
-    score++;
-    break;
-  } else if (numberGuesser < correctAnswer) {
-    alert(`Your guess is too low. You have ${(i - 1)} attempts remaining.`);
-  } else if (numberGuesser > correctAnswer) {
-    alert(`Your guess is too high. You have ${(i)} attempts remaining.`);
+function questionSix() {
+  while (attempts) {
+    let numberGuesser = parseInt(prompt('Guess a number between 1-20', ''));
+    if (numberGuesser === correctAnswer) {
+      alert('You are correct.');
+      score++;
+      break;
+    } else if (numberGuesser < correctAnswer) {
+      attempts--;
+      alert(`Your guess is too low. You have ${attempts} attempts remaining.`);
+    } else if (numberGuesser > correctAnswer) {
+      attempts--;
+      alert(`Your guess is too high. You have ${attempts} attempts remaining.`);
+    }
   }
+}
+questionSix();
 
-  if ((i) === 1) {
+function attempt() {
+  if (attempts === 0) {
     alert(`The correct answer was ${correctAnswer}.`);
-    break;
   }
-
 }
 
-
-
+attempt();
 
 
 
