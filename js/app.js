@@ -98,24 +98,29 @@ let petsName = ['chance', 'weiner', 'stinky boy'];
 
 let guesses = 0;
 let correct = false;
-for (let k = 6; k > guesses; k--) {
-  let userResponse = prompt('What is my dogs name? (there are multiple correct answers)').toLowerCase();
-  for (let j = 0; j < petsName.length; j++) {
-    if (userResponse.toLowerCase() === petsName[j]) {
-      alert('That is correct! ' + username);
-      correct = true;
-      score++;
+
+function questionSeven() {
+  for (let k = 6; k > guesses; k--) {
+    let userResponse = prompt('What is my dogs name? (there are multiple correct answers)').toLowerCase();
+    for (let j = 0; j < petsName.length; j++) {
+      if (userResponse.toLowerCase() === petsName[j]) {
+        alert('That is correct! ' + username);
+        correct = true;
+        score++;
+      }
     }
+    if (!correct) {
+      alert(`You have ${[k - 1]} guesses left.`);
+    }
+    if (correct) break;
   }
-  if (!correct) {
-    alert(`You have ${[k - 1]} guesses left.`);
-  }
-  if (correct) break;
 }
+
+questionSeven();
+
 
 alert(`The names my dog goes by were ${petsName}`);
 alert(`Your total score was ${score}`);
-
 alert('Thank you, ' + username + ', for playing along.');
 
 
